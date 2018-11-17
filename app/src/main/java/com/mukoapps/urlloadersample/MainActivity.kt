@@ -39,16 +39,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //Called here only for demonstrative purposes, in practice should be moved to the Application class
+        //or library implementation
         Loader.resizeCache(10 * 1024 * 1024)//Set cache size to 10MB
 
         //get the ViewModel for this activity
         model = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
        //configure views
-
-
-
-
         main_r_v.layoutManager = LinearLayoutManager(this)
         main_r_v.adapter = MainPinRecyclerViewAdapter()
         //attach events
