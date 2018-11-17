@@ -9,7 +9,8 @@ import java.util.concurrent.Semaphore
 
 
 class Loader private constructor(){
-    //used to throttle simultaneous downloads to a max of 10
+    //used to throttle simultaneous downloads to a max of 10, in a real world app a thread pool should be used
+    //as fixing a max connections number has no point
     private val semaphore = Semaphore(10)
     var cacheSize = 4 * 1024 * 1024 // 4MiB
     private val tasksFlow = Channel<DownloadTask>()
