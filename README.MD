@@ -11,7 +11,7 @@ class CustomDownloadable(url: String):Downloadable<WeirdFileFormat>(url){
 }
 ```
 
-### Items can be downloaded using: Downloadable.load(url)
+### Items can be downloaded using: Downloadable(url).load()
 
 ```kotlin
 DownloadableString("http://pastebin.com/raw/wgkJgazE").load {result, error->
