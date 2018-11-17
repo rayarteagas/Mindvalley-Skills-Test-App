@@ -5,6 +5,9 @@ abstract class Downloadable<T>(var url: String) {
     private var used = false
     private lateinit var onLoad: (T?, throwable: Throwable?) -> Unit
     abstract fun transform(content: DownloadableContent): T
+    
+    //A weak reference to Activity or LifecycleOwner would be great to avoid memory leaks.
+    //Implementation omitted for the sake of simplicity
     fun load(onLoad: (T?, Throwable?) -> Unit) {
         if (used)
             //Avoid unnecessary chaining complexity as this is not the main goal of this sample
