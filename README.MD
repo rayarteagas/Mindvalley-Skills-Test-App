@@ -1,6 +1,6 @@
 ### Library functionality relies on Downloadable class.
 
-DownloadableBitmap and DownloadableString has been provided as convenience implementations, but the user can implement any kind of dowload extenging the Downloadable class as fallows:
+DownloadableBitmap and DownloadableString has been provided as convenience implementations, but the user can implement any kind of dowload by extending the Downloadable class as fallows:
 
 ```kotlin
 //Using WeirdFileFormat with illustrative purpose
